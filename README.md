@@ -6,6 +6,18 @@ https://discord.com/api/oauth2/authorize?client_id=964807472382623764&permission
 ## Spreadsheet for managing IDs
 https://docs.google.com/spreadsheets/d/1-2JLV6aGzBb8_l4wQWom6TOrVyNTj2EgU5WrNyDdAT8/edit#gid=0
 
+## Commands
+```
+# Print a list of all weekly winners
+!print-list
+
+# Print a list of a specific weeks winners
+!print-week <week-number>
+
+# Print a list of a specific weeks winners
+!print-check <tokenID>
+```
+
 ### Set up your google project & enable the sheets API 👈
 1. Go to the Google Developers Console
 2. Select your project or create a new one (and then select it)
