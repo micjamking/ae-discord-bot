@@ -11,6 +11,9 @@ https://docs.google.com/spreadsheets/d/1-2JLV6aGzBb8_l4wQWom6TOrVyNTj2EgU5WrNyDd
 # Print a list of all weekly winners
 !print-list
 
+# Print a list of the current weeks winners
+!print-current
+
 # Print a list of a specific weeks winners
 !print-week <week-number>
 
