@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 // Initialize the sheet
+const prints = [];
 const doc = new GoogleSpreadsheet('1-2JLV6aGzBb8_l4wQWom6TOrVyNTj2EgU5WrNyDdAT8');
 
 await doc.useServiceAccountAuth({
@@ -14,8 +15,6 @@ await doc.useServiceAccountAuth({
 await doc.loadInfo();
 const sheet = doc.sheetsByIndex[0];
 await sheet.loadCells('A1:Z100');
-
-const prints = [];
 
 for (let i = 0; i < 26; i++) {
   prints[i] = [];
@@ -55,6 +54,16 @@ client.on('ready', () => {
 client.on('messageCreate', (msg) => {
   if (msg.content === '!print-list') {
     const content = `Weekly print giveaway winners:\n${prints.map((week, i) => `\nWeek #${i+1}:\n${week.map(ae => `- ${ae}\n`)}`)}`;
+    msg.reply(content.replace(/\,/g, ''));
+  }
+});
+
+/** 
+ * Display list of current weeks print giveaway winners
+ */
+ client.on('messageCreate', (msg) => {
+  if (msg.content === '!print-current') {
+    const content = `Here are the current weeks print giveaway winners:\n${prints[prints.length - 1].map(ae => `- ${ae}\n`)}`;
     msg.reply(content.replace(/\,/g, ''));
   }
 });
