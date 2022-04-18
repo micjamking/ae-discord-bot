@@ -1,18 +1,17 @@
 {
-  "name": "discord-bot",
+  "name": "ae-discord-print-bot",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Discord bot to track print giveaways",
   "main": "app.js",
   "type": "module",
   "scripts": {
     "start": "node app.js"
   },
-  "keywords": [],
-  "author": "@micjamking",
+  "author": "@85pixels",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^13.6.0",
-    "dotenv": "^16.0.0",
-    "google-spreadsheet": "^3.2.0"
+    "discord.js": "13.6.0",
+    "dotenv": "16.0.0",
+    "google-spreadsheet": "3.2.0"
   }
 }
