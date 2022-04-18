@@ -50,7 +50,7 @@ $ npm start
 3. Give your application a name, and click the “Create” button
 4. On the right side is an option labeled “Bot”. Click it, and select “Add Bot”.
 5. Change the name of the bot, and click the "Save" button.
-6. Copy the token received from this page (ie. <discord-bot-token>).
+6. Copy the token received from this page (ie. `<discord-bot-token>`).
 
 ### Set up your google project & enable the sheets API 👈
 1. Go to the Google Developers Console
@@ -73,7 +73,7 @@ $ npm start
   - Click "Create" button
   - Your JSON key file is generated and downloaded to your machine (it is the only copy!)
   - Click "DONE"
-  - Note your service account's email address (also available in the JSON key file (ie. <service-account-email-address> and <service-account-private-key>))
+  - Note your service account's email address (also available in the JSON key file (ie. `<service-account-email-address>` and `<service-account-private-key>`))
 3. Share the doc (or docs) with your service account using the email noted above
 
 ### Create environment variables for credentials
