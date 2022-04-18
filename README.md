@@ -17,7 +17,7 @@ https://docs.google.com/spreadsheets/d/1-2JLV6aGzBb8_l4wQWom6TOrVyNTj2EgU5WrNyDd
 # Print a list of a specific weeks winners
 !print-week <week-number>
 
-# Print a list of a specific weeks winners
+# Check if a specific tokenID was selected in a previous giveaway
 !print-check <tokenID>
 ```
 
