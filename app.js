@@ -7,7 +7,7 @@ dotenv.config();
 let timer;
 let PRINTS = [];
 const AUTO_SYNC = true; // Auto-sync print data [DURATION] minutes after last command
-const BOT_ROLE = 'Admin'; // Change to role restricted for manual bot updates
+const BOT_ROLES = ['Admin', 'Mod']; // Change to restricted roles for manual bot updates
 const SHEET_ID = '1-2JLV6aGzBb8_l4wQWom6TOrVyNTj2EgU5WrNyDdAT8';
 const DURATION = 60;
 const COMMANDS = `
@@ -236,7 +236,7 @@ client.on('messageCreate', (msg) => {
  */
  client.on('messageCreate', (msg) => {
   if (msg.content === '!print-update') {
-    if (msg.member.roles.cache.find(r => r.name === BOT_ROLE)){
+    if (msg.member.roles.cache.find(r => BOT_ROLES.includes(r.name))){
       msg.reply(`:robot: Beep boop! Fetching latest print data...`);
       updatePrints(() => {
         msg.reply(`:robot: Beep boop! Print data synced! :frame_photo:`);
